@@ -24,7 +24,7 @@ function fetchData() {
       accounts.push(data.accounts[1]);
       accounts.push(data.accounts[2]);
 
-      createUsernames(accounts2);
+      createUsernames(accounts);
     })
     .catch(err => {
       console.log('Error');
