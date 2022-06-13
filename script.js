@@ -4,7 +4,6 @@
 // BANKIST APP
 
 /////////////////////////////////////////////////
-// Data
 // DIFFERENT DATA! Contains movement dates, currency and locale
 
 let account1;
@@ -145,7 +144,6 @@ const createUsernames = function (accs) {
       .join('');
   });
 };
-createUsernames(accounts);
 
 const updateUI = function (acc) {
   // Display movements
@@ -265,6 +263,8 @@ btnTransfer.addEventListener('click', function (e) {
     timer = startLogOutTimer();
 
     window.alert('Money is transferred...');
+  } else {
+    window.alert('Something is wrong...');
   }
 });
 
@@ -287,11 +287,13 @@ btnLoan.addEventListener('click', function (e) {
       // Reset timer
       clearInterval(timer);
       timer = startLogOutTimer();
+
+      window.alert('Loan is confirmed...');
     }, 2500);
+  } else {
+    window.alert('Something is wrong...');
   }
   inputLoanAmount.value = '';
-  
-  window.alert('Loan is confirmed...');
 });
 
 btnClose.addEventListener('click', function (e) {
@@ -310,12 +312,14 @@ btnClose.addEventListener('click', function (e) {
 
     // Hide UI
     containerApp.style.opacity = 0;
+    labelWelcome.textContent = 'Log in to get started';
+
+    window.alert('Account of ' + currentAccount.owner + ' is closed...');
+  } else {
+    window.alert('Something is wrong');
   }
 
   inputCloseUsername.value = inputClosePin.value = '';
-  labelWelcome.textContent = 'Log in to get started';
-  
-  window.alert('Account of ' + currentAccount.owner + ' is closed...');
 });
 
 //Sorting the data
