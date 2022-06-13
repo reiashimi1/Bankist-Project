@@ -313,6 +313,7 @@ btnClose.addEventListener('click', function (e) {
   }
 
   inputCloseUsername.value = inputClosePin.value = '';
+  labelWelcome.textContent = 'Log in to get started';
   
   window.alert('Account of ' + currentAccount.owner + ' is closed...');
 });
