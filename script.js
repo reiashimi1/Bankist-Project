@@ -274,6 +274,8 @@ btnLoan.addEventListener('click', function (e) {
   const amount = Math.floor(inputLoanAmount.value);
 
   if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
+    window.alert('Loan is confirmed...');
+
     setTimeout(function () {
       // Add movement
       currentAccount.movements.push(amount);
@@ -287,9 +289,7 @@ btnLoan.addEventListener('click', function (e) {
       // Reset timer
       clearInterval(timer);
       timer = startLogOutTimer();
-
-      window.alert('Loan is confirmed...');
-    }, 2500);
+    }, 1000);
   } else {
     window.alert('Something is wrong...');
   }
