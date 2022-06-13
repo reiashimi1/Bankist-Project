@@ -290,6 +290,8 @@ btnLoan.addEventListener('click', function (e) {
     }, 2500);
   }
   inputLoanAmount.value = '';
+  
+  window.alert('Loan is confirmed...');
 });
 
 btnClose.addEventListener('click', function (e) {
@@ -311,6 +313,8 @@ btnClose.addEventListener('click', function (e) {
   }
 
   inputCloseUsername.value = inputClosePin.value = '';
+  
+  window.alert('Account of ' + currentAccount.owner + ' is closed...');
 });
 
 //Sorting the data
