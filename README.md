@@ -9,4 +9,3 @@ SAD - project
 
 --Authors:
 --Rei Ashimi
---Sexhi Picaku
